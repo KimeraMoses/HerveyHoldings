@@ -1,0 +1,24 @@
+.testimonial_wrapper {
+  padding: 3em 0;
+  position: relative;
+  background: linear-gradient(rgba(0, 72, 36, 0.651), rgba(72, 192, 72, 0.678)),url("../../assets/Upper-nile.jpg");
+  background-size: cover;
+}
+.subheading {
+  color: var(--primary_color);
+}
+.heading_section h2{
+  font-size: 50px;
+  color: #fff;
+  font-family: "Merriweather", serif;
+  font-style: italic;
+  font-weight: 600;
+}
+.testimonial_slider_wrapper .dav__slider_content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
