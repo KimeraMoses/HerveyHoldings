@@ -133,10 +133,9 @@ const ContactForm = (props) => {
         />
 
         <Button
-          className="btns"
-          type="submit"
-          buttonStyle="btn--primary"
-          buttonSize="Btn--fullWidth"
+          className="btns w-100"
+          variant="contained"
+          color="secondary"
         >
          {isLoading? "Sending...":  "Send"}
         </Button>

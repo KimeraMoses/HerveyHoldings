@@ -25,7 +25,7 @@ const ContactUs = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setEmail(value);
-    setError("")
+    setError("");
   };
   const NewsLetterFormSubmit = async (e) => {
     e.preventDefault();
@@ -44,7 +44,7 @@ const ContactUs = () => {
     }
 
     try {
-      setError('')
+      setError("");
       // await dispatch(NewsLetters(email));
 
       setEmail("");
@@ -66,7 +66,6 @@ const ContactUs = () => {
         <h1>Contact Us</h1>
       </div>
 
-
       <div className={classes.dav__contact_us_form_wrapper}>
         <Paper className={classes.dav__contact_us_form}>
           <div className={classes.dav__contact_us_form_inner}>
@@ -79,10 +78,7 @@ const ContactUs = () => {
                 <h5>Our Address</h5>
               </div>
               <div className={classes.dav__address_content}>
-                <p>
-                  Freedom City Shopping Mall
-                  <br /> Entebbe Road, Uganda
-                </p>
+                <p>Plot 2, 8th St, City Star Building, Industrial Area.</p>
               </div>
             </div>
             <div className={classes.dav__phone_contacts}>
@@ -93,10 +89,7 @@ const ContactUs = () => {
               <div className={classes.dav__phone_contacts_content}>
                 <ul>
                   <li>
-                    Phone: <a href="https://wa.link/0v0s1w">+256757795781</a>
-                  </li>
-                  <li>
-                    WhatsApp: <a href="https://wa.link/barf5j">+256701412430</a>
+                    Phone: <a href="https://wa.link/7j8eyz">+256778600932</a>
                   </li>
                 </ul>
               </div>
@@ -109,11 +102,11 @@ const ContactUs = () => {
               <div className={classes.dav__phone_contacts_content}>
                 <ul>
                   <li>
-                    <a href="mailto:info@davsafaris.com">info@davsafaris.com</a>
+                    <a href="mailto:info@herveyholdings.com">info@herveyholdings.com</a>
                   </li>
                   <li>
-                    <a href="mailto:davsafaris@gmail.com">
-                      davsafaris@gmail.com
+                    <a href="mailto:herveyholdings11@gmail.com">
+                      herveyholdings11@gmail.com
                     </a>
                   </li>
                 </ul>
@@ -132,15 +125,22 @@ const ContactUs = () => {
             <h5>Subscribe to our Newsletters</h5>
             <div className={classes.dav__newsletter_form_wrapper}>
               {message && (
-                <Alert style={{marginBottom: 5}} severity={message === "success" ? "success" : "error"}>
+                <Alert
+                  style={{ marginBottom: 5 }}
+                  severity={message === "success" ? "success" : "error"}
+                >
                   {message === "success"
                     ? "You have successfully subscribed to our Newsletter"
                     : message}
                 </Alert>
               )}
 
-              {error && <Alert style={{marginBottom: 5}} severity="error">{error}</Alert>}
-              <Form onSubmit={NewsLetterFormSubmit} style={{marginTop: 10}}>
+              {error && (
+                <Alert style={{ marginBottom: 5 }} severity="error">
+                  {error}
+                </Alert>
+              )}
+              <Form onSubmit={NewsLetterFormSubmit} style={{ marginTop: 10 }}>
                 <TextField
                   variant="outlined"
                   size="small"
@@ -153,7 +153,7 @@ const ContactUs = () => {
                   className={classes.dav__subscribe_form_field}
                 />
                 <Button variant="outlined" color="primary" type="submit">
-                  {isLoading? "Subscribing...": "Subscribe"}
+                  {isLoading ? "Subscribing..." : "Subscribe"}
                 </Button>
               </Form>
             </div>
