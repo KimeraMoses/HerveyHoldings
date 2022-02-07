@@ -10,6 +10,7 @@ import About from "./About";
 import Services from "../Services/Services";
 import Testimonial from "../Testimonial/Testimonial";
 import Team from "../Team/Team";
+import Project from "../Projects/Project";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <About />
       <Services />
       <Team />
+      <Project/>
       <Testimonial />
       <Partners />
     </Wrapper>
