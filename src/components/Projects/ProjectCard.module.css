@@ -1,0 +1,27 @@
+.team_card_wrapper{
+    padding: 30px 10px;
+}
+.project_card_wrapper{
+    width: 100%;
+    min-height: 300px;
+    padding: 5px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+.project_card_content {
+    text-align: center;
+    background-color: #000000b7;
+    padding: 10px 5px;
+    color: #fff;
+    
+}
+.project_card_content h6{
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 689px) {
+    .team_card_wrapper{
+        padding: 10px;
+    }
+}

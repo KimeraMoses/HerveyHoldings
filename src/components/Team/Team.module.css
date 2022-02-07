@@ -1,22 +1,14 @@
 .team_section {
   background-color: #fff;
-  text-align: center;
-  padding: 3rem 0;
+  padding: 30px 40px;
 }
-.team__header_section h2{
-    font-weight: 600;
-    font-family: "Merriweather", serif;
-    font-style: italic;
-    margin-bottom: 2rem;
-
-}
-.team_member_wrapper{
-    padding: 0 60px!important;
-    justify-content: space-between;
+.team_member_wrapper {
+  padding: 0 10px !important;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 689px) {
-    .team_member_wrapper{
-        padding: 0 10px!important;
-    }
+  .team_member_wrapper {
+    padding: 0 10px !important;
+  }
 }

@@ -1,5 +1,10 @@
+.projects_section{
+    padding: 30px 40px;
 
-.gpa__project_carousel_wrapper{
-    background-color: #f5f5f5;
-    padding: 30px 0px;
+}
+
+.projects_actions_wrapper{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
