@@ -1,6 +1,4 @@
 import React from "react";
-import { useState } from "react";
-import { useSelector } from "react-redux";
 
 //===COMPONENT IMPORTS===
 import Wrapper from "../../containers/hoc/wrapper";
@@ -18,7 +16,7 @@ const Home = () => {
       <Slideshow />
       <About />
       <Services />
-      <Project/>
+      <Project />
       <Team />
       <Testimonial />
       <Partners />
