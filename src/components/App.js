@@ -20,11 +20,11 @@ import "./App.css";
 import Footer from "./Footer/Footer";
 import LoginForm from "./Membership/LoginForm/LoginForm";
 import RegisterForm from "./Membership/RegisterForm/RegisterForm";
-import ContactUs from "./ContactUs/ContactUs";
 import { AutoAuthenticate } from "../store/Actions/AuthActions";
 import Terms from "../containers/PrivacyPolicies/Terms";
 import Policies from "../containers/PrivacyPolicies/Policies";
-import AboutUs from "./AboutUs/AboutUs";
+import ContactUs from "./Pages/ContactUs/ContactUs";
+import AboutUs from "./Pages/AboutUs/AboutUs";
 
 const App = (props) => {
   const isAuthenticated = useSelector((state) => state.auth.isLoggedIn);

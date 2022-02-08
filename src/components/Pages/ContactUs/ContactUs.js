@@ -1,6 +1,6 @@
 import classes from "./ContactUs.module.css";
 import React, { useEffect, useState } from "react";
-import Image from "../../assets/About-Us.jpg";
+import Image from "../../../assets/About-Us.jpg";
 import RoomIcon from "@material-ui/icons/Room";
 import PhoneIcon from "@material-ui/icons/Phone";
 import { Button, Paper, TextField } from "@material-ui/core";

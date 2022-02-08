@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import SendIcon from "@material-ui/icons/Telegram";
 import classes from "./NewsLetterForm.module.css";
 import { useDispatch, useSelector } from "react-redux";
-// import { NewsLetters } from "../../store/Actions/UserActions";
 import { Alert } from "@material-ui/lab";
 
 const NewsLetterForm = () => {
