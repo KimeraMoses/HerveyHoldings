@@ -26,7 +26,7 @@ const NavigationMenu = (props) => {
         <NavMenuItem itemTitle="Home" itemLink="/" />
         <NavMenuItem itemTitle="About Us" itemLink="/about-us" />
         <NavMenuItem itemTitle="Our Services" itemLink="/services" />
-        <NavMenuItem itemTitle="Portfolio" itemLink="/portfolio" />
+        <NavMenuItem itemTitle="Portfolio" itemLink="/portifolio" />
         <NavMenuItem itemTitle="Contact us" itemLink="/contact-us" />
       </ul>
     </div>

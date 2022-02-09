@@ -29,6 +29,9 @@ body {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
+ul{
+  list-style-type: none;
+}
 
 a {
   text-decoration: none !important;

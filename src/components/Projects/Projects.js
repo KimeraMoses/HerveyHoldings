@@ -1,49 +1,27 @@
+import { Button } from "@material-ui/core";
 import React from "react";
+import { Container, Row } from "react-bootstrap";
+import SectionTitle from "../HomePage/SectionTitle/SectionTitle";
+import ProjectCard from "./ProjectCard";
+import classes from "./Projects.module.css";
 
-//===REDUX IMPORTS
-
-//===REACT ELESTIC CAROUSEL IMPORTS
-import Carousel from "react-elastic-carousel";
-
-//===COMPONENTS IMPORTS
-import styles from "./CourseUnitCarousel.module.css";
-
-const breakpoints = [
-  { width: 1, itemsToShow: 1.2 },
-  { width: 500, itemsToShow: 2.2 },
-  { width: 780, itemsToShow: 3 },
-  { width: 1200, itemsToShow: 4.2 },
-];
-
-const ProjectsCarousel = () => {
-  const isLoading = false;
-
+const Project = () => {
   return (
-    <Carousel
-      className={`${styles.gpa__project_carousel_wrapper}`}
-      breakPoints={breakpoints}
-      pagination={false}
-      easing="ease"
-      tiltEasing="ease"
-    >
-      {isLoading
-        ? [...Array(8).keys()].map((index) => {
-            return <TourCardSkeleton type="slider" />;
-          })
-        : FilteredTours.slice(0, 20).map((tour) => {
-            return (
-              <TourCard
-                TourImage={tour.imageCover}
-                TourTitle={tour.name}
-                TourSlug={tour.slug}
-                NumDays={tour.duration}
-                NumNights={tour.duration - 1}
-                TourDescription={tour.description}
-                TourRating={tour.ratingsAverage}
-              />
-            );
-          })}
-    </Carousel>
+    <Container fluid className={classes.projects_section}>
+      <SectionTitle title="Our Portfolio" />
+      <Row>
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+      </Row>
+      <div className={classes.projects_actions_wrapper}>
+        <Button variant="contained" color="secondary">
+          More Projects
+        </Button>
+      </div>
+    </Container>
   );
 };
-export default ProjectsCarousel;
+
+export default Project;

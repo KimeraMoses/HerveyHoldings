@@ -51,7 +51,7 @@ const Footer = () => {
             <h5>Ongoing Projects</h5>
 
             <ul className={classes.dav__footer_safaris}>
-              {[...Array(3).keys()].map((index) => {
+              {[...Array(2).keys()].map((index) => {
                 return (
                   <li key={index}>
                     <Link to={`/`}>

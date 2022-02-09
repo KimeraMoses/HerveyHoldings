@@ -1,6 +1,6 @@
 import classes from "./ContactUs.module.css";
 import React, { useEffect, useState } from "react";
-import Image from "../../../assets/About-Us.jpg";
+import Image from "../../../assets/hervey-location.png";
 import RoomIcon from "@material-ui/icons/Room";
 import PhoneIcon from "@material-ui/icons/Phone";
 import { Button, Paper, TextField } from "@material-ui/core";
@@ -59,7 +59,7 @@ const ContactUs = () => {
         className={classes.dav__contact_us_hero}
         style={{
           backgroundImage: `url(${Image})`,
-          backgroundSize: "cover",
+          // backgroundSize: "cover",
           backgroundPosition: "center center",
         }}
       >

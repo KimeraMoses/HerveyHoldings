@@ -2,7 +2,7 @@ import React from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import classes from "./SlideShow.module.css";
-import Image1 from "../../assets/background.webp";
+import Image1 from "../../assets/upper-nile-constrution.jpg";
 import Image2 from "../../assets/Upper-nile.jpg";
 import Image3 from "../../assets/About-Us.jpg";
 import Image4 from "../../assets/water-supply.jpg";

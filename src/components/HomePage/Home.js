@@ -8,7 +8,7 @@ import About from "./About";
 import Services from "../Services/Services";
 import Testimonial from "../Testimonial/Testimonial";
 import Team from "../Team/Team";
-import Project from "../Projects/Project";
+import Projects from "../Projects/Projects";
 
 const Home = () => {
   return (
@@ -16,7 +16,7 @@ const Home = () => {
       <Slideshow />
       <About />
       <Services />
-      <Project />
+      <Projects />
       <Team />
       <Testimonial />
       <Partners />
