@@ -33,3 +33,9 @@
   padding: 30px 50px;
   width: 100%;
 }
+
+@media screen and (max-width: 689px) {
+  .about_us_content_wrapper{
+    padding: 20px 10px;
+  }
+}

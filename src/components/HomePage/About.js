@@ -5,7 +5,7 @@ import image from "../../assets/About-Us.jpg";
 import Divider from "../UI/Divider/Divider";
 import classes from "./About.module.css";
 
-const About = () => {
+const About = ({isHomePage}) => {
   return (
     <section className={classes.home__about_section_wrapper}>
       <Container>
@@ -41,9 +41,10 @@ const About = () => {
                 challenges food insecurity, transport, climate change,
                 insufficient infrastructure and clean energy among others.
               </p>
+              {isHomePage &&
               <Link to="/about-us" className={classes.btn__readmore}>
                 Read More
-              </Link>
+              </Link>}
             </div>
           </div>
         </Row>

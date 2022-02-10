@@ -1,0 +1,76 @@
+.company_vision_wrapper {
+  padding: 0px;
+  min-height: 400px;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.vision_hero_wrapper {
+  width: 30%;
+  background: linear-gradient(
+      0deg,
+      rgba(61, 163, 165, 0.8),
+      rgba(61, 163, 165, 0.8)
+    ),
+    url("../../../../assets/ceo.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+.vision_content_wrapper {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+.vision_wrapper {
+  margin-left: -50px;
+  height: 150px;
+  display: flex;
+}
+.icon_wrapper {
+  width: 105px;
+  height: 100px;
+  padding: 24px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vision_icon_wrapper {
+  background-color: #00b0d2;
+}
+.mission_icon_wrapper {
+  background-color: var(--bg_color);
+}
+.values_icon_wrapper {
+  background-color: #1c3850;
+}
+.vision_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.core_values ul {
+  padding: 0;
+  margin: 0;
+}
+.core_values ul li::before {
+  content: "✓";
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.vision_content_wrapper svg {
+  font-size: 36px;
+  color: #fff;
+}
+
+@media screen and (max-width: 689px) {
+  .icon_wrapper {
+    width: 115px;
+  }
+}

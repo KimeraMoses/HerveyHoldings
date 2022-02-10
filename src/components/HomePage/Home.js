@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 //===COMPONENT IMPORTS===
 import Wrapper from "../../containers/hoc/wrapper";
@@ -11,10 +11,13 @@ import Team from "../Team/Team";
 import Projects from "../Projects/Projects";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Wrapper>
       <Slideshow />
-      <About />
+      <About isHomePage={true} />
       <Services />
       <Projects />
       <Team />
