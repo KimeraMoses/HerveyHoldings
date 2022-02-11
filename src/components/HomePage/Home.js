@@ -18,7 +18,7 @@ const Home = () => {
     <Wrapper>
       <Slideshow />
       <About isHomePage={true} />
-      <Services />
+      <Services isHomePage={true} />
       <Projects />
       <Team />
       <Testimonial />

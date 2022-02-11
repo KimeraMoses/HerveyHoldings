@@ -25,8 +25,8 @@ import Terms from "../containers/PrivacyPolicies/Terms";
 import Policies from "../containers/PrivacyPolicies/Policies";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import AboutUs from "./Pages/AboutUs/AboutUs";
-import Services from "./Services/Services";
 import Portifolio from "./Pages/Portifolio/Portifolio";
+import ServicePage from "./Pages/Services/ServicePage";
 
 const App = (props) => {
   const isAuthenticated = useSelector((state) => state.auth.isLoggedIn);
@@ -46,7 +46,7 @@ const App = (props) => {
             <Route path="/" exact element={<Home />} />
             <Route path="/login" exact element={<LoginForm />} />
             <Route path="/register" exact element={<RegisterForm />} />
-            <Route path="/services" exact element={<Services />} />
+            <Route path="/services" exact element={<ServicePage />} />
             <Route path="/portifolio" exact element={<Portifolio />} />
             <Route path="/contact-us" exact element={<ContactUs />} />
             <Route path="/about-us" exact element={<AboutUs />} />

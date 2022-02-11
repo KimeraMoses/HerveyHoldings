@@ -3,9 +3,9 @@ import image from "../../assets/Upper-nile.jpg";
 import FormatQuoteIcon from '@material-ui/icons/FormatQuote';
 import classes from  "./TestimonialCard.module.css";
 
-const TestimonialCard = () => {
+const TestimonialCard = ({key}) => {
   return (
-    <div className={classes.testimonial__item_card}>
+    <div className={classes.testimonial__item_card} key={key}>
       <div className={classes.testimonial__item}>
         <div className={`${classes.testimony_wrap} py-4`}>
           <div className={`${classes.icon} d-flex align-items-center justify-content-center`}>

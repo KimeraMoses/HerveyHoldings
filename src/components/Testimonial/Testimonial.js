@@ -48,10 +48,10 @@ const Testimonial = () => {
               cssClass={classes.testimonial__slider}
               {...properties}
             >
-              {ServicesData.map((service) => {
+              {ServicesData.map((service, index) => {
                 return (
                   <div className={classes.each_slide}>
-                    <TestimonialCard />
+                    <TestimonialCard key={index}/>
                   </div>
                 );
               })}

@@ -1,0 +1,34 @@
+.services_details_wrappers {
+  padding: 30px;
+}
+.service_details {
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  display: flex;
+  padding-bottom: 20px;
+}
+.service_image_wrapper {
+  min-width: 350px;
+  min-height: 200px;
+  border-radius: 20px;
+}
+.service_details_content_wrapper {
+  padding: 0 20px 20px;
+}
+.service_details_content_wrapper p {
+  text-align: justify;
+}
+.service_details_content_wrapper h4 {
+  color: #192839;
+  font-weight: 700;
+  margin-bottom: 21px;
+}
+
+@media screen and (max-width: 689px) {
+  .service_details {
+    flex-direction: column;
+  }
+  .service_details_content_wrapper {
+    padding: 10px 0px;
+  }
+}
