@@ -5,6 +5,7 @@ import About from "../../HomePage/About";
 import Breadcrumb from "../Breadcrumb/Breadcrumb";
 import MisionVision from "./MissionVision/MisionVision";
 import SectionTitle from "../../HomePage/SectionTitle/SectionTitle";
+import OurStory from "./OurStory/OurStory";
 
 const AboutUs = () => {
   useEffect(() => {
@@ -16,6 +17,7 @@ const AboutUs = () => {
       <div className={classes.about_us_content_wrapper}>
         <About />
         <MisionVision />
+        <OurStory/>
       </div>
     </div>
   );
