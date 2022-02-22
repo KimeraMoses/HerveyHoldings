@@ -26,8 +26,6 @@ const OurStory = () => {
         of industry partners, we are on a journey to regional market dominance
         and industry leadership.
       </p>
-      K365 Investments and Technical Services (U) Limited incorporated as
-      limited liability in Uganda with focus on construction
       <Row className={classes.story_line_wrapper}>
         <Story
           year="2015"

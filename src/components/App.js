@@ -28,11 +28,11 @@ import AboutUs from "./Pages/AboutUs/AboutUs";
 import Portifolio from "./Pages/Portifolio/Portifolio";
 import ServicePage from "./Pages/Services/ServicePage";
 import OurPartners from "./Pages/Partners/OurPartners";
+import PrivacyPrompt from "../containers/PrivacyPolicies/PrivacyPrompt";
 
 const App = (props) => {
   const isAuthenticated = useSelector((state) => state.auth.isLoggedIn);
   const dispatch = useDispatch();
-
   useEffect(() => {
     window.scrollTo(0, 0);
     AutoAuthenticate(dispatch);
@@ -57,6 +57,7 @@ const App = (props) => {
           </Routes>
           <BackToTop />
           <Footer />
+          <PrivacyPrompt />
         </Paper>
       </Router>
     </Theme>
