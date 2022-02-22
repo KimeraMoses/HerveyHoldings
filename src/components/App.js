@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import {
   Navigate,
   BrowserRouter as Router,
@@ -27,6 +27,7 @@ import ContactUs from "./Pages/ContactUs/ContactUs";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import Portifolio from "./Pages/Portifolio/Portifolio";
 import ServicePage from "./Pages/Services/ServicePage";
+import OurPartners from "./Pages/Partners/OurPartners";
 
 const App = (props) => {
   const isAuthenticated = useSelector((state) => state.auth.isLoggedIn);
@@ -48,6 +49,7 @@ const App = (props) => {
             <Route path="/register" exact element={<RegisterForm />} />
             <Route path="/services" exact element={<ServicePage />} />
             <Route path="/portifolio" exact element={<Portifolio />} />
+            <Route path="/partners" exact element={<OurPartners />} />
             <Route path="/contact-us" exact element={<ContactUs />} />
             <Route path="/about-us" exact element={<AboutUs />} />
             <Route path="/terms-of-services" exact element={<Terms />} />
