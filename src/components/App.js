@@ -29,6 +29,7 @@ import Portifolio from "./Pages/Portifolio/Portifolio";
 import ServicePage from "./Pages/Services/ServicePage";
 import OurPartners from "./Pages/Partners/OurPartners";
 import PrivacyPrompt from "../containers/PrivacyPolicies/PrivacyPrompt";
+import Project from "./Pages/Portifolio/Project/Project";
 
 const App = (props) => {
   const isAuthenticated = useSelector((state) => state.auth.isLoggedIn);
@@ -54,10 +55,11 @@ const App = (props) => {
             <Route path="/about-us" exact element={<AboutUs />} />
             <Route path="/terms-of-services" exact element={<Terms />} />
             <Route path="/privacy-policies" exact element={<Policies />} />
+            <Route path="/projects/:projectTitle" exact element={<Project />} />
           </Routes>
+          <PrivacyPrompt />
           <BackToTop />
           <Footer />
-          <PrivacyPrompt />
         </Paper>
       </Router>
     </Theme>

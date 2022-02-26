@@ -14,7 +14,7 @@ const OurPartners = () => {
         <p>
           Hervey Holdings Ltd will be celebrated its 6th birthday in October
           2021, since transforming from our earlier trading name. We have since
-          worked alongside the world’s major engineering companies such as the
+          worked alongside the worlds major engineering companies such as the
           following;
         </p>
       </div>

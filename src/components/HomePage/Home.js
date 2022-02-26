@@ -19,7 +19,7 @@ const Home = () => {
       <Slideshow />
       <About isHomePage={true} />
       <Services isHomePage={true} />
-      <Projects />
+      <Projects isHomePage={true} />
       <Team />
       <Testimonial />
       <Partners />

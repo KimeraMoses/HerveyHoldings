@@ -35,10 +35,6 @@ const ServicePage = () => {
           </li>
           <li>Tree Cutting and Transportation of Wood and Timber</li>
         </ul>
-        {/* In events where sub-contracts specialized work to other sub-consultants,
-        supervises these sub-consultants to ensure quality control, good
-        workmanship, and timely implementation of those services. */}
-        <p></p>
       </div>
     </div>
   );
