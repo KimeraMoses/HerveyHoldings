@@ -9,7 +9,8 @@ const Project = () => {
   const { projectTitle } = useParams();
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [projectTitle]);
+
   const data = ProjectData.filter((project) => project.id === projectTitle)[0];
   console.log(data);
 
