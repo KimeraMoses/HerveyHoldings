@@ -120,8 +120,7 @@ const LoginForm = () => {
 
                   <h1>SIGN IN</h1>
                   <p>
-                    Enter your email and password to signin into Dav Safaris
-                    Uganda
+                    Enter your email and password to signin
                   </p>
                 </div>
               </div>

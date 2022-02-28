@@ -50,6 +50,15 @@ const ResetPassword = () => {
                     size="small"
                     className={classes.gpa__form_input_field}
                   />
+                  <div className={classes.remembered_pass}>
+                    <p>
+                      Remembered Password? <Link to="/login">Login</Link>
+                    </p>
+                    <p>
+                      New to Hervey Holdings?{" "}
+                      <Link to="/register">Register</Link>
+                    </p>
+                  </div>
 
                   <Row>
                     <Col
@@ -68,12 +77,6 @@ const ResetPassword = () => {
                     </Col>
                   </Row>
                 </form>
-                {/* <div className={classes.gpa__register_form_footer}>
-                  Don't have account yet?
-                  <span style={{ marginLeft: 5 }}>
-                    <Link to="/register">Register</Link>
-                  </span>
-                </div> */}
               </div>
             </div>
           </div>

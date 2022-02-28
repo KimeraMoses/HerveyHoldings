@@ -13,7 +13,7 @@ import {
 import { Col, Container, Row } from "react-bootstrap";
 import Logo from "../../AppBar/Logo";
 import { Visibility, VisibilityOff } from "@material-ui/icons";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { signup } from "../../../store/Actions/AuthActions";
 import { useDispatch, useSelector } from "react-redux";
 import { Alert } from "@material-ui/lab";
@@ -24,9 +24,9 @@ const RegisterForm = () => {
   }, []);
   const dispatch = useDispatch();
   const [error, setError] = useState("");
-  const isLoading = useSelector(state=>state.registration.isLoading);
-  const message = useSelector(state=>state.registration.message);
-  const navigate = useNavigate()
+  const isLoading = useSelector((state) => state.registration.isLoading);
+  const message = useSelector((state) => state.registration.message);
+  const navigate = useNavigate();
 
   const [values, setValues] = useState({
     email: "",
@@ -72,13 +72,13 @@ const RegisterForm = () => {
     if (values.email.length < 3) {
       return setError("A valid email is required to register");
     }
-    if (values.email.length >0) {
-    let pattern = new RegExp(
-      /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
-    );
-    if (!pattern.test(values.email)) {
-      return setError("Please enter valid email address.");
-    }
+    if (values.email.length > 0) {
+      let pattern = new RegExp(
+        /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
+      );
+      if (!pattern.test(values.email)) {
+        return setError("Please enter valid email address.");
+      }
     }
 
     if (values.password.length < 6) {
@@ -93,30 +93,24 @@ const RegisterForm = () => {
 
     try {
       setError("");
-      await dispatch(
-      signup(
-        values.email,
-        values.username,
-        values.password,
-      ));
-      navigate('/login')
+      await dispatch(signup(values.email, values.username, values.password));
+      navigate("/login");
       // enqueueSnackbar("Account created Succesfully", {
-        //   variant: "success",
+      //   variant: "success",
       //   action,
       //   anchorOrigin: {
-        //     vertical: "top",
+      //     vertical: "top",
       //     horizontal: "center",
       //   },
       //   TransitionComponent: Slide,
       // });
-      
+
       setValues({ ...values, values: "" });
-      setError('')
+      setError("");
     } catch (error) {
       if (!navigator.onLine) {
         return setError("Please connect to the internet to register");
       }
-      
     }
   };
 
@@ -145,8 +139,8 @@ const RegisterForm = () => {
 
                   <h1>SIGN UP</h1>
                   <p>
-                    Manage your tours at the comfort of your home by creating
-                    your account with Dav Safaris Uganda
+                    Create your account to enjoy limitless
+                    functionalities
                   </p>
                 </div>
               </div>
@@ -155,7 +149,10 @@ const RegisterForm = () => {
               >
                 {(message || error) && (
                   <div className="d-flex mb-3 w-100">
-                    <Alert severity="error" className={classes.dav__membership_form_error_wrapper}>
+                    <Alert
+                      severity="error"
+                      className={classes.dav__membership_form_error_wrapper}
+                    >
                       {error || message}
                     </Alert>
                   </div>
@@ -251,7 +248,7 @@ const RegisterForm = () => {
                         type="submit"
                         className={classes.dav__membership_submit_button}
                       >
-                        {isLoading? "Creating account...": "Register"}
+                        {isLoading ? "Creating account..." : "Register"}
                       </Button>
                     </Col>
                   </Row>

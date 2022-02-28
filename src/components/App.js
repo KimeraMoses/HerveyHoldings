@@ -20,7 +20,6 @@ import "./App.css";
 import Footer from "./Footer/Footer";
 import LoginForm from "./Membership/LoginForm/LoginForm";
 import RegisterForm from "./Membership/RegisterForm/RegisterForm";
-import { AutoAuthenticate } from "../store/Actions/AuthActions";
 import Terms from "../containers/PrivacyPolicies/Terms";
 import Policies from "../containers/PrivacyPolicies/Policies";
 import ContactUs from "./Pages/ContactUs/ContactUs";
@@ -30,14 +29,12 @@ import ServicePage from "./Pages/Services/ServicePage";
 import OurPartners from "./Pages/Partners/OurPartners";
 import PrivacyPrompt from "../containers/PrivacyPolicies/PrivacyPrompt";
 import Project from "./Pages/Portifolio/Project/Project";
+import ResetPassword from "./Membership/PasswordReset/PasswordReset";
 
 const App = (props) => {
-  const isAuthenticated = useSelector((state) => state.auth.isLoggedIn);
-  const dispatch = useDispatch();
   useEffect(() => {
     window.scrollTo(0, 0);
-    AutoAuthenticate(dispatch);
-  }, [dispatch]);
+  }, []);
 
   return (
     <Theme>
@@ -48,6 +45,7 @@ const App = (props) => {
             <Route path="/" exact element={<Home />} />
             <Route path="/login" exact element={<LoginForm />} />
             <Route path="/register" exact element={<RegisterForm />} />
+            <Route path="/password-reset" exact element={<ResetPassword />} />
             <Route path="/services" exact element={<ServicePage />} />
             <Route path="/portifolio" exact element={<Portifolio />} />
             <Route path="/partners" exact element={<OurPartners />} />

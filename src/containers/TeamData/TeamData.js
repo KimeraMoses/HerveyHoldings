@@ -20,7 +20,7 @@ export const TeamData = [
         image: WinFred,
     },
     {
-        name: "Mr. Tom Tomson Mpabaisi",
+        name: "Mr. Tomson Mpabaisi",
         role: "Advisor, Engineering & Environment",
         image: Tom,
     },
