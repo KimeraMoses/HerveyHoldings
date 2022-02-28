@@ -96,7 +96,7 @@ const Footer = () => {
                 <a href="https://wa.link/7j8eyz">+256778600932</a>{" "}
               </li>
               <li>
-                <WhatsAppIcon />
+                <PhoneOutlined />
                 <a href="tel:+256740111199">+256740111199</a>{" "}
               </li>
               <li>
