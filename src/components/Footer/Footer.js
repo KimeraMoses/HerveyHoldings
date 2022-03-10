@@ -52,7 +52,7 @@ const Footer = () => {
               {ProjectData.slice(0,2).map((project) => {
                 return (
                   <li key={project.id}>
-                    <Link to={`/projects/${project.id}`}>
+                    <Link to={`/projects/${project.slug}`}>
                       <MenuIcon />
                       {project.title}
                     </Link>

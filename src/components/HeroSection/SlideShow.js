@@ -28,7 +28,7 @@ const Slideshow = () => {
       <Slide easing="ease" cssClass="homeslider" arrows={false} duration={2000}>
         {HeroSlider.map((servcie) => {
           return (
-            <div className={classes.each_slide}>
+            <div className={classes.each_slide} key={servcie.image}>
               <div
                 style={{
                   backgroundImage: `url(${servcie.image})`,

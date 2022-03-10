@@ -5,7 +5,7 @@ import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 const ProjectCard = (props) => {
-  const {data} = props
+  const { data } = props;
   return (
     <Col lg={3} md={6} sm={12} className={classes.team_card_wrapper}>
       <div
@@ -17,15 +17,13 @@ const ProjectCard = (props) => {
         }}
       >
         <div className={classes.project_card_content}>
-          <h6>
-            {data.title}
-          </h6>
+          <h6>{data.title}</h6>
           <div className={classes.project_card_actions}>
             <Button
               variant="outlined"
               color="secondary"
               component={Link}
-              to={`/projects/${data.id}`}
+              to={`/projects/${data.slug}`}
             >
               View Project
             </Button>

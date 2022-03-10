@@ -15,7 +15,7 @@ const Project = (props) => {
       <SectionTitle title="Our Portfolio" />
       <Row>
         {ProjectData.map((project) => {
-          return <ProjectCard data={project} />;
+          return <ProjectCard data={project} key={project.slug}/>;
         })}
 
       </Row>

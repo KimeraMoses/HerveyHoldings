@@ -56,7 +56,6 @@ const ContactForm = (props) => {
       }
     }
     try {
-
       setMessage("Message Sent Successfully");
       setValues({
         name: "",

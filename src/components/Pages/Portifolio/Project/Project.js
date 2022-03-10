@@ -10,8 +10,7 @@ const Project = () => {
     window.scrollTo(0, 0);
   }, [projectTitle]);
 
-  const data = ProjectData.filter((project) => project.id === projectTitle)[0];
-
+  const data = ProjectData.filter((project) => project.slug=== projectTitle)[0];
   return (
     <div className={classes.project_wrapper}>
       <div
@@ -42,6 +41,7 @@ const Project = () => {
               {data.gallery.map((image) => {
                 return (
                   <div
+                    key={image}
                     className={classes.project_gallary_image}
                     style={{
                       backgroundImage: `url(${image})`,

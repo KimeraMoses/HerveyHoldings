@@ -8,6 +8,7 @@ import Image6 from "../../assets/fuel-reserves.jpg";
 export const ProjectData = [
     {
       id: "01",
+      slug: "supply-installation-and-commissioning-of-concrete-and-culverts-batching-machinery-plant",
       title: "Supply, installation and commissioning of concrete and culverts batching machinery plant contract at KCCA’s Kyanja yard",
       client: "Kampala Capital City Authority (KCCA)",
       sDate: "1st Feb 2021",
@@ -28,7 +29,8 @@ export const ProjectData = [
     },
     {
         id: "02",
-        title: "Construction Upper Nile and Kyoga Management Zones Office Block Office.",
+        slug: "construction-of-upper-nile-and-kyoga-management-zones",
+        title: "Construction of Upper Nile and Kyoga Management Zones Office Block",
         client: "Ministry of Water & Environment",
         sDate: "12th August 2017",
         duration: "12 months",
@@ -51,6 +53,7 @@ export const ProjectData = [
     },
     {
         id: "03",
+        slug: "construction-of-butalangu-water-supply-and-sanitation-scheme",
         title: "Construction of Butalangu Water Supply and Sanitation Scheme- Nakaseke District",
         client: "Ministry of Water & Environment",
         sDate: "22th April 2018",
@@ -75,6 +78,7 @@ export const ProjectData = [
     },
     {
         id: "04",
+        slug: "supply-delivery-installation-and-commissioning-of-5-dairy-plants",
         title: "Supply,delivery, installation and commissioning of five (05) mini-dairy processing plant equipment for the National Agricultural Advisory Services (NAADS)",
         client: "National Agricultural Advisory Services (NAADS)",
         sDate: "8th June, 2021",
