@@ -2,20 +2,14 @@ import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import {
   Button,
-  Checkbox,
-  FormControlLabel,
   Paper,
   TextField,
 } from "@material-ui/core";
 import classes from "./ContactUsForm.module.css";
-import { useDispatch, useSelector } from "react-redux";
-// import { SendMessage } from "../../../../store/Actions/TourActions";
 import { Alert } from "@material-ui/lab";
 
 const ContactForm = (props) => {
-  const isLoading = useSelector((state) => state.message.isLoading);
-  const dispatch = useDispatch();
-
+  const [isLoading, setIsLoading]=useState(false)
   const [values, setValues] = useState({
     name: "",
     email: "",
@@ -27,22 +21,27 @@ const ContactForm = (props) => {
 
   const handleOnChange = (event) => {
     const { name, value } = event.target;
-    setValues({ ...values, [name]: event.target.value });
+    setValues({ ...values, [name]: value });
     setError("");
   };
 
   const MessageFormSubmitHandler = async (e) => {
     e.preventDefault();
+    setIsLoading(true)
     if (values.name.length < 1) {
+      setIsLoading(false)
       return setError("Name(s) required");
     }
     if (values.phone.length < 1) {
+      setIsLoading(false)
       return setError("Phone number required");
     }
     if (values.email.length < 1) {
+      setIsLoading(false)
       return setError("Email required");
     }
     if (values.message.length < 1) {
+      setIsLoading(false)
       return setError("Please message is required");
     }
 
@@ -52,13 +51,12 @@ const ContactForm = (props) => {
         /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
       );
       if (!pattern.test(values.email)) {
+        setIsLoading(false)
         setError("Please enter valid email address.");
       }
     }
     try {
-      await dispatch(
-        // SendMessage(values.name, values.email, values.phone, values.message)
-      );
+
       setMessage("Message Sent Successfully");
       setValues({
         name: "",
@@ -67,6 +65,7 @@ const ContactForm = (props) => {
         message: "",
       });
     } catch (error) {
+      setIsLoading(false)
       return setError("Failed to send message, Please try again later");
     }
   };
@@ -136,6 +135,7 @@ const ContactForm = (props) => {
           className="btns w-100"
           variant="contained"
           color="secondary"
+          type="submit"
         >
          {isLoading? "Sending...":  "Send"}
         </Button>
