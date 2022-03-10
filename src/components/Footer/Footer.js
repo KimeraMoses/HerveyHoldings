@@ -1,13 +1,10 @@
 import { createSvgIcon } from "@material-ui/core";
 import {
   EmailOutlined,
-  Instagram,
   PhoneOutlined,
   RoomOutlined,
-  Twitter,
 } from "@material-ui/icons";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import MenuIcon from "@material-ui/icons/ArrowForward";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
@@ -98,6 +95,12 @@ const Footer = () => {
               <li>
                 <PhoneOutlined />
                 <a href="tel:+256740111199">+256740111199</a>{" "}
+              </li>
+              <li>
+                <EmailOutlined />
+                <a href="mailto:info@herveyholdings.com">
+                  info@herveyholdings.com
+                </a>
               </li>
               <li>
                 <EmailOutlined />

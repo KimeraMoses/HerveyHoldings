@@ -14,7 +14,7 @@
 .project_hero_wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 .project_details {
   padding: 30px 20px !important;

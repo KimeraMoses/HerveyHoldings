@@ -17,10 +17,7 @@ const Project = (props) => {
         {ProjectData.map((project) => {
           return <ProjectCard data={project} />;
         })}
-        {/* <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard /> */}
+
       </Row>
       {isHomePage && (
         <div className={classes.projects_actions_wrapper}>

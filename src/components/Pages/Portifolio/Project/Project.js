@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router";
-import Image from "../../../../assets/industrial-goal.jpg";
 import { ProjectData } from "../../../../containers/ProjectData/ProjectData";
 import classes from "./Project.module.css";
 
@@ -12,12 +11,18 @@ const Project = () => {
   }, [projectTitle]);
 
   const data = ProjectData.filter((project) => project.id === projectTitle)[0];
-  console.log(data);
 
   return (
     <div className={classes.project_wrapper}>
-      <div className={classes.project_hero_wrapper}>
-        <img src={Image} alit="" />
+      <div
+        className={classes.project_hero_wrapper}
+        style={{
+          backgroundImage: `url(${data.gallery[0]})`,
+          backgroundSize: "contain",
+          backgroundPosition: "center center",
+        }}
+      >
+        {/* <img src={data.gallery[0]} alit="" /> */}
       </div>
       <Container fluid className={classes.project_details_wrapper}>
         <Row>

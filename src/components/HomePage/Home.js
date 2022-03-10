@@ -9,6 +9,7 @@ import Services from "../Services/Services";
 import Testimonial from "../Testimonial/Testimonial";
 import Team from "../Team/Team";
 import Projects from "../Projects/Projects";
+import TeamStructure from "../Team/TeamStructure";
 
 const Home = () => {
   useEffect(() => {
@@ -20,6 +21,7 @@ const Home = () => {
       <About isHomePage={true} />
       <Services isHomePage={true} />
       <Projects isHomePage={true} />
+      {/* <TeamStructure/> */}
       <Team />
       <Testimonial />
       <Partners />

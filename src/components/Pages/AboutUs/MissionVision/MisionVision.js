@@ -11,7 +11,7 @@ const MisionVision = () => {
       <div className={classes.about_us_mission}>
         <SectionTitle title="Hervey Values" />
         <p>
-          As , we aim at continually exploring innovations and technologies that
+          As Hervey Holdings Ltd, we aim at continually exploring innovations and technologies that
           will enable us to provide our clients with the highest quality work,
           in the most efficient, ethical and integral manner while maximizing
           the value of every resource available and equipping staff with the

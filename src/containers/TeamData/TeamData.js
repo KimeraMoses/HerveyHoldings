@@ -2,6 +2,8 @@ import Mondo from "../../assets/Mondo.jpg";
 import Charles from "../../assets/Charlse.jpg";
 import Tom from "../../assets/Tom.jpg";
 import WinFred from "../../assets/WinFred.jpg";
+import CP from "../../assets/Cp.png";
+import user from "../../assets/user.png";
 
 export const TeamData = [
     {
@@ -27,11 +29,11 @@ export const TeamData = [
     {
         name: "CP Ubaldo Bamunoba",
         role: "Advisor, Logistics & Procurement",
-        image: Mondo,
+        image: CP,
     },
     {
         name: "Eng. Martin D. Tumutungire",
         role: "Advisor, Research & Planning",
-        image: Tom,
+        image: user,
     },
 ]

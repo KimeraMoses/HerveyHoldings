@@ -1,7 +1,7 @@
-import ServiceImage1 from "../../assets/upper-nile-constrution.jpg";
-import ServiceImage2 from "../../assets/water-supply.jpg";
-import ServiceImage3 from "../../assets/Upper-nile.jpg";
-import ServiceImage4 from "../../assets/About-Us.jpg";
+import ServiceImage1 from "../../assets/Grain-floor.jpg";
+import ServiceImage2 from "../../assets/warehousing.jpg";
+import ServiceImage3 from "../../assets/fuel-reserves.jpg";
+import ServiceImage4 from "../../assets/sustainable-energy.jpg";
 
 export const ServicesData = [
   {

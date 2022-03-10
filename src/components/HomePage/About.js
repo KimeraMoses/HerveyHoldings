@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import image from "../../assets/About-Us.jpg";
+import image from "../../assets/about-us-image.jpg";
 import Divider from "../UI/Divider/Divider";
 import classes from "./About.module.css";
 

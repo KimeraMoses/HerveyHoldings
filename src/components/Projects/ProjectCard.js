@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "../../assets/About-Us.jpg";
 import { Col } from "react-bootstrap";
 import classes from "./ProjectCard.module.css";
 import { Button } from "@material-ui/core";
@@ -12,7 +11,7 @@ const ProjectCard = (props) => {
       <div
         className={classes.project_card_wrapper}
         style={{
-          backgroundImage: `url(${Image})`,
+          backgroundImage: `url(${data.gallery[0]})`,
           backgroundSize: "cover",
           backgroundPosition: "center top",
         }}

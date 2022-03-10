@@ -1,9 +1,9 @@
-import Image1 from "../../assets/Kyanja-projects.jpg";
+import Image1 from "../../assets/Kyanja-projects-1.jpg";
 import Image2 from "../../assets/Upper-nile.jpg";
 import Image3 from "../../assets/upper-nile-constrution.jpg";
 import Image4 from "../../assets/water-supply.jpg";
 import Image5 from "../../assets/About-Us.jpg";
-import Image6 from "../../assets/hervey-team-2.jpeg";
+import Image6 from "../../assets/fuel-reserves.jpg";
 
 export const ProjectData = [
     {
@@ -47,7 +47,7 @@ export const ProjectData = [
             "Floor and wall tiles of 1,839 square meters",
             "Scaffolding of approximately 4,500SM"
         ],
-        gallery: [Image1,Image2,Image3,Image4,Image5,Image6]
+        gallery: [Image2,Image3,Image4,Image5,Image1,Image6]
     },
     {
         id: "03",
@@ -70,7 +70,7 @@ export const ProjectData = [
             "Supply and installation of a 200m3 pressed steel cold-water reservoir tank elevated on 12m high tower.",
             "Chlorination and sterilization"
         ],
-        gallery: [Image1,Image2,Image3,Image4,Image5,Image6]
+        gallery: [Image4,Image2,Image3,Image5,Image1,Image6]
 
     },
     {
@@ -95,6 +95,6 @@ export const ProjectData = [
             "To ensure value for money and timely execution of the contract for our client ",
             "To undertake supporting civil works and infrastructure for the plants"
         ],
-        gallery: [Image1,Image2,Image3,Image4,Image5,Image6]
+        gallery: [Image3,Image2,Image1,Image4,Image5,Image6]
     }
   ]
