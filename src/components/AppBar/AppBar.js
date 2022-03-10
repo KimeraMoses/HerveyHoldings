@@ -4,28 +4,15 @@ import React, { useState } from "react";
 import Toolbar from "@material-ui/core/Toolbar";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
-import LockOpenIcon from "@material-ui/icons/LockOpen";
-import { Hidden, IconButton, Button, Avatar } from "@material-ui/core";
-
-import Typography from '@material-ui/core/Typography';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import Switch from '@material-ui/core/Switch';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormGroup from '@material-ui/core/FormGroup';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
-
+import { Hidden, IconButton } from "@material-ui/core";
 
 //===COMPONENT IMPORTS===
 import classes from "./AppBar.module.css";
 import Logo from "./Logo";
 import NavigationMenu from "../Navigation/NavigationMenu";
-import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
 
 const AppBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { user, isLoggedIn } = useSelector((state) => state.auth);
 
   return (
     <>

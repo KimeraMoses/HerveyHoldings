@@ -1,11 +1,9 @@
 import React, { useEffect } from "react";
 import {
-  Navigate,
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
 //===MUI IMPORTS===
 import { Paper } from "@material-ui/core";
 

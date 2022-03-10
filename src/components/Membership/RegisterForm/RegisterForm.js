@@ -13,20 +13,14 @@ import {
 import { Col, Container, Row } from "react-bootstrap";
 import Logo from "../../AppBar/Logo";
 import { Visibility, VisibilityOff } from "@material-ui/icons";
-import { Link, useNavigate } from "react-router-dom";
-import { signup } from "../../../store/Actions/AuthActions";
-import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { Alert } from "@material-ui/lab";
 
 const RegisterForm = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const dispatch = useDispatch();
-  const [error, setError] = useState("");
-  const isLoading = useSelector((state) => state.registration.isLoading);
-  const message = useSelector((state) => state.registration.message);
-  const navigate = useNavigate();
+  const error=""
 
   const [values, setValues] = useState({
     email: "",
@@ -39,79 +33,53 @@ const RegisterForm = () => {
 
   const handleOnChange = (event) => {
     const { name, value } = event.target;
-    setValues({ ...values, [name]: event.target.value });
-    setError("");
-    if (name === "email") {
-      setError("");
-      if (values.email === "undefined") {
-        setError("Email is required to register");
-      }
-      if (values.email !== "undefined") {
-        setError("");
-        let pattern = new RegExp(
-          /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
-        );
-        if (!pattern.test(value)) {
-          setError("Please enter valid email address.");
-        }
-      }
-    }
-    setError("");
+    setValues({ ...values, [name]: value });
+    
   };
 
   const RegisterFormSubmitHandler = async (e) => {
     e.preventDefault();
 
-    if (values.username.length < 1) {
-      return setError("Names Required");
-    }
-    if (values.username.length < 3) {
-      return setError("Name too short");
-    }
+    // if (values.username.length < 1) {
+    //   return setError("Names Required");
+    // }
+    // if (values.username.length < 3) {
+    //   return setError("Name too short");
+    // }
 
-    if (values.email.length < 3) {
-      return setError("A valid email is required to register");
-    }
-    if (values.email.length > 0) {
-      let pattern = new RegExp(
-        /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
-      );
-      if (!pattern.test(values.email)) {
-        return setError("Please enter valid email address.");
-      }
-    }
+    // if (values.email.length < 3) {
+    //   return setError("A valid email is required to register");
+    // }
+    // if (values.email.length > 0) {
+    //   let pattern = new RegExp(
+    //     /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
+    //   );
+    //   if (!pattern.test(values.email)) {
+    //     return setError("Please enter valid email address.");
+    //   }
+    // }
 
-    if (values.password.length < 6) {
-      return setError("Password must be atleast 6 characters");
-    }
-    if (values.confirmPassword.length < 1) {
-      return setError("Please confirm password");
-    }
-    if (values.password !== values.confirmPassword) {
-      return setError("Passwords do not match");
-    }
+    // if (values.password.length < 6) {
+    //   return setError("Password must be atleast 6 characters");
+    // }
+    // if (values.confirmPassword.length < 1) {
+    //   return setError("Please confirm password");
+    // }
+    // if (values.password !== values.confirmPassword) {
+    //   return setError("Passwords do not match");
+    // }
 
-    try {
-      setError("");
-      await dispatch(signup(values.email, values.username, values.password));
-      navigate("/login");
-      // enqueueSnackbar("Account created Succesfully", {
-      //   variant: "success",
-      //   action,
-      //   anchorOrigin: {
-      //     vertical: "top",
-      //     horizontal: "center",
-      //   },
-      //   TransitionComponent: Slide,
-      // });
-
-      setValues({ ...values, values: "" });
-      setError("");
-    } catch (error) {
-      if (!navigator.onLine) {
-        return setError("Please connect to the internet to register");
-      }
-    }
+    // try {
+    //   setError("");
+    //   await dispatch(signup(values.email, values.username, values.password));
+    //   navigate("/login");
+    //   setValues({ ...values, values: "" });
+    //   setError("");
+    // } catch (error) {
+    //   if (!navigator.onLine) {
+    //     return setError("Please connect to the internet to register");
+    //   }
+    // }
   };
 
   //====Handle password visibility====//
@@ -147,13 +115,13 @@ const RegisterForm = () => {
               <div
                 className={`col-xs-12 col-sm-6 ${classes.dav__membership_form}`}
               >
-                {(message || error) && (
+                {error && (
                   <div className="d-flex mb-3 w-100">
                     <Alert
                       severity="error"
                       className={classes.dav__membership_form_error_wrapper}
                     >
-                      {error || message}
+                      {error}
                     </Alert>
                   </div>
                 )}
@@ -248,7 +216,7 @@ const RegisterForm = () => {
                         type="submit"
                         className={classes.dav__membership_submit_button}
                       >
-                        {isLoading ? "Creating account..." : "Register"}
+                        {"Register"}
                       </Button>
                     </Col>
                   </Row>
