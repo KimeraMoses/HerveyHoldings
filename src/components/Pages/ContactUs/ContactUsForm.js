@@ -1,15 +1,16 @@
 import React, { useState } from "react";
+import { send } from "emailjs-com";
 import { Form } from "react-bootstrap";
-import {
-  Button,
-  Paper,
-  TextField,
-} from "@material-ui/core";
+import { Button, Paper, TextField } from "@material-ui/core";
 import classes from "./ContactUsForm.module.css";
 import { Alert } from "@material-ui/lab";
 
+const EMAIL_SERVICE_ID = "service_4kipxfh";
+const EMAIL_TEMPLATE = "template_sngnz8w";
+const EMAIL_USER_ID = "user_IDjmxLmRz0NJwgKONgQ4b";
+
 const ContactForm = (props) => {
-  const [isLoading, setIsLoading]=useState(false)
+  const [isLoading, setIsLoading] = useState(false);
   const [values, setValues] = useState({
     name: "",
     email: "",
@@ -23,25 +24,26 @@ const ContactForm = (props) => {
     const { name, value } = event.target;
     setValues({ ...values, [name]: value });
     setError("");
+    setMessage("")
   };
 
   const MessageFormSubmitHandler = async (e) => {
     e.preventDefault();
-    setIsLoading(true)
+    setIsLoading(true);
     if (values.name.length < 1) {
-      setIsLoading(false)
+      setIsLoading(false);
       return setError("Name(s) required");
     }
     if (values.phone.length < 1) {
-      setIsLoading(false)
+      setIsLoading(false);
       return setError("Phone number required");
     }
     if (values.email.length < 1) {
-      setIsLoading(false)
+      setIsLoading(false);
       return setError("Email required");
     }
     if (values.message.length < 1) {
-      setIsLoading(false)
+      setIsLoading(false);
       return setError("Please message is required");
     }
 
@@ -51,22 +53,28 @@ const ContactForm = (props) => {
         /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
       );
       if (!pattern.test(values.email)) {
-        setIsLoading(false)
+        setIsLoading(false);
         setError("Please enter valid email address.");
       }
     }
-    try {
-      setMessage("Message Sent Successfully");
-      setValues({
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
+
+    send(EMAIL_SERVICE_ID, EMAIL_TEMPLATE, values, EMAIL_USER_ID)
+      .then((response) => {
+        setIsLoading(false);
+        setMessage("Message Sent Successfully");
+        setValues({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+        console.log("sent!!");
+      })
+      .catch((err) => {
+        setError("Failed to send message");
+        console.log("Failed to send!");
+        setIsLoading(false);
       });
-    } catch (error) {
-      setIsLoading(false)
-      return setError("Failed to send message, Please try again later");
-    }
   };
 
   return (
@@ -136,7 +144,7 @@ const ContactForm = (props) => {
           color="secondary"
           type="submit"
         >
-         {isLoading? "Sending...":  "Send"}
+          {isLoading ? "Sending..." : "Send"}
         </Button>
       </Form>
     </Paper>
