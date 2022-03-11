@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import { Col } from "react-bootstrap";
 import classes from "./TeamCard.module.css";
 

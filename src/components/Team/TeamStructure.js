@@ -1,9 +1,7 @@
 import React from "react";
-import { Container, Row } from "react-bootstrap";
-import TeamCard from "./TeamCard";
+import { Container } from "react-bootstrap";
 import StructureImg from "../../assets/team-structcures.png";
-import classes from "./Team.module.css";
-import { TeamData } from "../../containers/TeamData/TeamData";
+import classes from "./TeamStructure.module.css";
 import SectionTitle from "../HomePage/SectionTitle/SectionTitle";
 
 const TeamStructure = () => {

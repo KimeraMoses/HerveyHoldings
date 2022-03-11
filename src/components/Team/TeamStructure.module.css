@@ -1,0 +1,19 @@
+.team_section {
+  background-color: #fff;
+  padding: 30px !important;
+}
+.team_structure{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.team_structure img{
+    width: 80%;
+    height: auto;
+}
+
+@media screen and (max-width: 889px) {
+  .team_structure img {
+    width: 100%;
+  }
+}

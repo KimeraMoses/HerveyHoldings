@@ -21,7 +21,7 @@ const Home = () => {
       <About isHomePage={true} />
       <Services isHomePage={true} />
       <Projects isHomePage={true} />
-      {/* <TeamStructure/> */}
+      <TeamStructure/>
       <Team />
       <Testimonial />
       <Partners />

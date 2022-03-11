@@ -1,11 +1,11 @@
 import React from "react";
-import image from "../../assets/Upper-nile.jpg";
+import image from "../../assets/user.png";
 import FormatQuoteIcon from '@material-ui/icons/FormatQuote';
 import classes from  "./TestimonialCard.module.css";
 
-const TestimonialCard = ({key}) => {
+const TestimonialCard = () => {
   return (
-    <div className={classes.testimonial__item_card} key={key}>
+    <div className={classes.testimonial__item_card}>
       <div className={classes.testimonial__item}>
         <div className={`${classes.testimony_wrap} py-4`}>
           <div className={`${classes.icon} d-flex align-items-center justify-content-center`}>
@@ -25,8 +25,8 @@ const TestimonialCard = ({key}) => {
                   }}
               ></div>
               <div className={`${classes.user__details} pl-3`}>
-                <p className={classes.user_name}>Kimera Moses</p>
-                <span className={classes.user_position}>Managing Director KCCA</span>
+                <p className={classes.user_name}>Ssebalamu Bashir</p>
+                <span className={classes.user_position}>Projects Coordinator, KCCA</span>
               </div>
             </div>
           </div>

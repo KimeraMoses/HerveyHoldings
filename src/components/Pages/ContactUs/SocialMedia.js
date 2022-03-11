@@ -1,10 +1,8 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { Fb } from "../../../containers/Icons/Icons";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import TwitterIcon from '@material-ui/icons/Twitter';
-import YouTubeIcon from '@material-ui/icons/YouTube';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 import classes from "./SocialMedia.module.css";

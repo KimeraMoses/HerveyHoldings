@@ -1,6 +1,4 @@
 import React from "react";
-import Image from "../../../assets/ceo.jpg";
-import { ServicesData } from "../../../containers/ServicesData/ServicesData";
 import classes from "./ServiceDetailsCard.module.css";
 
 const ServiceDetailsCard = ({service, key}) => {

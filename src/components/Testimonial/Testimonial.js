@@ -1,10 +1,8 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
-import image from "../../assets/Upper-nile.jpg";
 import { Slide } from "react-slideshow-image";
 import classes from "./Testimonial.module.css";
 import { ServicesData } from "../../containers/ServicesData/ServicesData";
-import { Link } from "react-router-dom";
 import TestimonialCard from "./TestimonialCard";
 
 const Testimonial = () => {
@@ -43,7 +41,8 @@ const Testimonial = () => {
         </Row>
         <Container>
           <div className={classes.testimonial_slider_wrapper}>
-            <Slide
+            <TestimonialCard />
+            {/* <Slide
               easing="ease"
               cssClass={classes.testimonial__slider}
               {...properties}
@@ -55,7 +54,7 @@ const Testimonial = () => {
                   </div>
                 );
               })}
-            </Slide>
+            </Slide> */}
           </div>
         </Container>
       </Container>

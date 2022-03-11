@@ -1,7 +1,6 @@
-import react, { useEffect } from "react";
+import React, { useEffect } from "react";
 
 import { ServicesData } from "../../../containers/ServicesData/ServicesData";
-import Services from "../../Services/Services";
 import Breadcrumb from "../Breadcrumb/Breadcrumb";
 import ServiceDetailsCard from "./ServiceDetailsCard";
 import classes from "./ServicePage.module.css";
