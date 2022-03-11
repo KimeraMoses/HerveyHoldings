@@ -68,11 +68,11 @@ const ContactForm = (props) => {
           phone: "",
           message: "",
         });
-        console.log("sent!!");
+        // console.log("sent!!");
       })
       .catch((err) => {
         setError("Failed to send message");
-        console.log("Failed to send!");
+        // console.log("Failed to send!");
         setIsLoading(false);
       });
   };
