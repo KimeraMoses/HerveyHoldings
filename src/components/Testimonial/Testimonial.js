@@ -1,35 +1,33 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
-import { Slide } from "react-slideshow-image";
 import classes from "./Testimonial.module.css";
-import { ServicesData } from "../../containers/ServicesData/ServicesData";
 import TestimonialCard from "./TestimonialCard";
 
 const Testimonial = () => {
-  const properties = {
-    duration: 3000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    indicators: true,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-        },
-      },
-      {
-        breakpoint: 500,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-    ],
-  };
+  // const properties = {
+  //   duration: 3000,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   indicators: true,
+  //   arrows: false,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 3,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 500,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //       },
+  //     },
+  //   ],
+  // };
   return (
     <>
       <Container fluid className={classes.testimonial_wrapper}>

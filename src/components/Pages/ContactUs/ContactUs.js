@@ -1,20 +1,19 @@
 import classes from "./ContactUs.module.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Image from "../../../assets/hervey-location.png";
 import RoomIcon from "@material-ui/icons/Room";
 import PhoneIcon from "@material-ui/icons/Phone";
-import { Button, Paper, TextField } from "@material-ui/core";
+import { Paper } from "@material-ui/core";
 import ContactUsForm from "./ContactUsForm";
 import { EmailOutlined } from "@material-ui/icons";
 import SocialMedia from "./SocialMedia";
-import { Form } from "react-bootstrap";
 
 const ContactUs = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-    return (
+  return (
     <div className={classes.dav__contact_us_page_wrapper}>
       <div
         className={classes.dav__contact_us_hero}
@@ -63,7 +62,9 @@ const ContactUs = () => {
               <div className={classes.dav__phone_contacts_content}>
                 <ul>
                   <li>
-                    <a href="mailto:info@herveyholdings.com">info@herveyholdings.com</a>
+                    <a href="mailto:info@herveyholdings.com">
+                      info@herveyholdings.com
+                    </a>
                   </li>
                   <li>
                     <a href="mailto:herveyholdings11@gmail.com">
