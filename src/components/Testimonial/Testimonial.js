@@ -33,7 +33,7 @@ const Testimonial = () => {
       <Container fluid className={classes.testimonial_wrapper}>
         <Row className="justify-content-center mb-5">
           <div className={`col-md-7 text-center ${classes.heading_section}`}>
-            <span className={classes.subheading}>What Our Cliets Say</span>
+            <span className={classes.subheading}>What Our Clients Say</span>
             <h2 className="mb-3">Testimonials</h2>
           </div>
         </Row>
