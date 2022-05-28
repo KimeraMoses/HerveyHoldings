@@ -1,9 +1,5 @@
 import { createSvgIcon } from "@material-ui/core";
-import {
-  EmailOutlined,
-  PhoneOutlined,
-  RoomOutlined,
-} from "@material-ui/icons";
+import { EmailOutlined, PhoneOutlined, RoomOutlined } from "@material-ui/icons";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import MenuIcon from "@material-ui/icons/ArrowForward";
 import React from "react";
@@ -32,8 +28,8 @@ const Footer = () => {
             <h5>About Us</h5>
 
             <p>
-              We are a general merchandise company with a niche in general
-              supplies, consultancy, design and construction at the national and
+              We are a holding company with a niche in general supplies,
+              consultancy, design and construction at the national and
               international standards.
             </p>
           </div>
@@ -49,7 +45,7 @@ const Footer = () => {
             <h5>Ongoing Projects</h5>
 
             <ul className={classes.dav__footer_safaris}>
-              {ProjectData.slice(0,2).map((project) => {
+              {ProjectData.slice(0, 2).map((project) => {
                 return (
                   <li key={project.id}>
                     <Link to={`/projects/${project.slug}`}>
