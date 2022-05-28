@@ -2,14 +2,26 @@
   background-color: #fff;
   padding: 30px !important;
 }
-.team_structure{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.team_structure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.team_structure img{
-    width: 80%;
-    height: auto;
+.team_structure img {
+  width: 80%;
+  height: auto;
+}
+.ad_team_link_wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 20px;
+}
+.ad_team_link_wrapper a {
+  background-color: var(--dav__primary_color);
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 20px;
 }
 
 @media screen and (max-width: 889px) {

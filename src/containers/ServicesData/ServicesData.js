@@ -2,6 +2,8 @@ import ServiceImage1 from "../../assets/Grain-floor.jpg";
 import ServiceImage2 from "../../assets/warehousing.jpg";
 import ServiceImage3 from "../../assets/fuel-reserves.jpg";
 import ServiceImage4 from "../../assets/sustainable-energy.jpg";
+import ServiceImage5 from "../../assets/Fencing.jpg";
+import ServiceImage6 from "../../assets/hording.jpg";
 
 export const ServicesData = [
   {
@@ -27,5 +29,17 @@ export const ServicesData = [
     image: ServiceImage4,
     description:
       "With our strong expertise and business networks, Hervey Holdings executes design and construction and project financing arrangements around the nexus of clean energy, sustainable natural resources exploitation, building construction, plant and machinery installation, highways, clean water supply and waste water management services among others.",
+  },
+  {
+    name: "Fencing",
+    image: ServiceImage5,
+    description:
+      "Link net is a component fence system, comprising essentially of three fundamental components: fabric, structure, and fittings. How these elements are combined is the critical question. Chain link is available in a wide variety of gauges and coatings. The most specific coating is zinc (galvanized) and green RAL6005 PVCcoating that  enhances landscaping, blending naturally with trees, shrubs, and bushes. Link wire protects and embellishes assets, is long-lasting, free of maintenance, yet economical. Without obstructing views, a chain-link wire fence also provides protection, blends well with landscaping, and controls pets.",
+  },
+  {
+    name: "Hording",
+    image: ServiceImage6,
+    description:
+      "We see hoardings every single day. They fade into the background on our morning commute. They serve as the backdrop to our lunch time walks. Steel hoarding panels mask unsightly building works and keep us safe from the construction works going on behind their panels. Consequently, whether made from painted wooden boards or high-quality printed free standing panels, they are an essential part of construction works. In addition, marketers are starting to see the huge advertising potential of these wide-format printed panels. Hoardings have the power to position products infront of viewers in a non-intrusive manner.",
   },
 ];

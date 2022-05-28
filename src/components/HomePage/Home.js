@@ -7,7 +7,6 @@ import Slideshow from "../HeroSection/SlideShow";
 import About from "./About";
 import Services from "../Services/Services";
 import Testimonial from "../Testimonial/Testimonial";
-import Team from "../Team/Team";
 import Projects from "../Projects/Projects";
 import TeamStructure from "../Team/TeamStructure";
 
@@ -21,8 +20,7 @@ const Home = () => {
       <About isHomePage={true} />
       <Services isHomePage={true} />
       <Projects isHomePage={true} />
-      <TeamStructure/>
-      <Team />
+      <TeamStructure />
       <Testimonial />
       <Partners />
     </Wrapper>

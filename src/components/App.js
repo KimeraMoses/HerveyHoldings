@@ -1,9 +1,5 @@
 import React, { useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //===MUI IMPORTS===
 import { Paper } from "@material-ui/core";
 
@@ -28,6 +24,7 @@ import OurPartners from "./Pages/Partners/OurPartners";
 import PrivacyPrompt from "../containers/PrivacyPolicies/PrivacyPrompt";
 import Project from "./Pages/Portifolio/Project/Project";
 import ResetPassword from "./Membership/PasswordReset/PasswordReset";
+import Team from "./Team/Team";
 
 const App = (props) => {
   useEffect(() => {
@@ -47,6 +44,7 @@ const App = (props) => {
             <Route path="/services" exact element={<ServicePage />} />
             <Route path="/portifolio" exact element={<Portifolio />} />
             <Route path="/partners" exact element={<OurPartners />} />
+            <Route path="/hervey-advisory-board" exact element={<Team />} />
             <Route path="/contact-us" exact element={<ContactUs />} />
             <Route path="/about-us" exact element={<AboutUs />} />
             <Route path="/terms-of-services" exact element={<Terms />} />

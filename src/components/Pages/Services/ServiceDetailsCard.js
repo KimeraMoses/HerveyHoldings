@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./ServiceDetailsCard.module.css";
 
-const ServiceDetailsCard = ({service, key}) => {
+const ServiceDetailsCard = ({ service, key }) => {
   return (
     <div className={classes.services_details_wrappers} id="service1" key={key}>
       <div className={classes.service_details}>
@@ -9,7 +9,8 @@ const ServiceDetailsCard = ({service, key}) => {
           className={classes.service_image_wrapper}
           style={{
             backgroundImage: `url(${service.image})`,
-            backgroundSize: "cover",
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
             backgroundPosition: "center top",
           }}
         ></div>
