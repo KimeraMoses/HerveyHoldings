@@ -15,13 +15,17 @@
   display: flex;
   justify-content: center;
   margin: 50px 0 20px;
+  text-align: center;
 }
 .ad_team_link_wrapper a {
   background-color: var(--dav__primary_color);
   color: #fff;
   font-weight: 600;
-  padding: 10px 20px;
+  padding: 10px 30px;
   border-radius: 20px;
+}
+.ad_team_link_wrapper a:hover {
+  color: #fff;
 }
 
 @media screen and (max-width: 889px) {
