@@ -27,8 +27,7 @@ const About = ({isHomePage}) => {
                 Liability Company Registered in Uganda under the 2012 Company
                 Act by the Uganda Registration services Bureau (URSB) taking
                 over from K365 Investments and Technical Services (U) Limited
-                that was incorporated in 2015. We are a general merchandise
-                company with a niche in general supplies, consultancy, design
+                that was incorporated in 2015. We are a logistics and construction company with a niche in general supplies, consultancy, design
                 and construction at the national and international standards.
               </p>
               <p>
